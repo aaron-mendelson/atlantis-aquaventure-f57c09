@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlantis The Palm, Dubai × Vantage — Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#21006E;--purple:#7012AD;--purpleblue:#6859FA;--fuchsia:#EB366E;--orange:#FFA161;
+--ink:#21006E;--muted:#6A6390;--bg:#F6F4FF;--card:#FFF;--line:#E7E2F5;
+--ok:#0F9D6E;--okbg:#E6F7F0;--int:#6859FA;--intbg:#ECEAFE;--cl:#C56A1E;--clbg:#FFF1E6;--pt:#EB366E;--ptbg:#FDE8EF;
+--grad:linear-gradient(90deg,#EB366E 0%,#FFA161 100%);}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:'Open Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.62}
+h1,h2,h3,h4{font-family:'Space Grotesk','Open Sans',sans-serif;margin:0;line-height:1.15;letter-spacing:-.01em;font-weight:700}
+a{color:var(--purpleblue);text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 26px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+body.locked{overflow:hidden}
+#gate{position:fixed;inset:0;z-index:99;background:linear-gradient(135deg,#21006E,#3A0E8C 60%,#7012AD 120%);display:flex;align-items:center;justify-content:center;padding:24px}
+#gate .box{background:#fff;border-radius:20px;padding:34px 30px;max-width:400px;width:100%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+#gate h2{font-size:23px;margin-bottom:6px}#gate p{color:var(--muted);font-size:14px;margin:0 0 18px}
+#gate input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit;margin-bottom:12px}
+#gate button{width:100%;padding:12px;border:0;border-radius:10px;background:var(--grad);color:#fff;font-weight:700;font-size:15px;cursor:pointer;font-family:'Space Grotesk',sans-serif}
+#gate .err{color:var(--pt);font-size:13px;height:16px;margin-top:10px}
+.hero{position:relative;background:linear-gradient(125deg,#21006E,#4413A0 46%,#7012AD 78%,#6859FA 120%);color:#fff;padding:66px 0 116px;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(1100px 380px at 82% -10%,rgba(255,161,97,.22),transparent 60%)}
+.hero .ey{font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:#C9B8FF;margin:14px 0 16px}
+.hero h1{font-size:clamp(32px,5vw,50px);max-width:17ch}.hero h1 .grad{background:linear-gradient(90deg,#FF9BC0,#FFC79A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{font-size:18px;color:#E4DCFF;max-width:64ch;margin-top:18px}
+.logo{height:34px;display:block}.wordmark{font-family:'Space Grotesk';font-weight:700;font-size:24px;color:#fff;letter-spacing:.02em}.wordmark span{display:block;font-size:11px;font-weight:500;color:#C9B8FF;letter-spacing:.12em}
+.metabar{display:flex;flex-wrap:wrap;gap:26px;margin-top:30px;font-size:14px;position:relative;z-index:2}
+.metabar span{display:block;color:#B7A6FF;font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}.metabar b{font-weight:600}
+.wave{position:absolute;bottom:-1px;left:0;width:100%;display:block}
+.stats{margin-top:-58px;position:relative;z-index:3;display:grid;grid-template-columns:repeat(5,1fr);gap:13px}
+.statcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 12px 34px rgba(33,0,110,.08)}
+.statcard .n{font-family:'Space Grotesk';font-size:27px;font-weight:700;color:var(--navy)}
+.statcard.h .n{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.statcard .l{font-size:12px;color:var(--muted);margin-top:2px}
+@media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
+.nav{position:sticky;top:0;z-index:8;background:rgba(246,244,255,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:11px 0;margin-top:38px}
+.nav .chips{display:flex;gap:8px;overflow-x:auto;font-size:12.5px}
+.nav a{white-space:nowrap;padding:6px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--navy);font-weight:600}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+.knum{font-family:'Space Grotesk';font-size:13px;font-weight:700;color:var(--purpleblue);letter-spacing:.04em}
+section h2{font-size:25px;margin:6px 0 14px}
+.callout{background:linear-gradient(120deg,#21006E,#7012AD);color:#fff;border-radius:20px;padding:30px}
+.callout .knum{color:#FFC79A}.callout h2{color:#fff}.callout p{color:#E9E2FF;max-width:74ch}
+.wt{display:flex;gap:16px;margin:16px 0}.wt-n{flex:none;width:34px;height:34px;border-radius:50%;background:var(--grad);color:#fff;font-family:'Space Grotesk';font-weight:700;display:flex;align-items:center;justify-content:center}
+.wt h4{color:#fff;font-size:17px;margin-bottom:4px}.wt p{margin:0}
+.diff{margin-top:18px;padding:14px 18px;border-left:3px solid var(--orange);background:rgba(255,255,255,.08);border-radius:0 10px 10px 0;color:#fff;font-weight:600}
+.lead{color:var(--muted);max-width:74ch}
+.req{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:13px 0;border-top:1px solid var(--line)}
+.req:first-of-type{border-top:0}
+.req .rid{font-family:'Space Grotesk';font-weight:700;color:var(--navy);font-size:13px;flex:none;width:74px}
+.req .rtx{flex:1;min-width:0;font-size:14.5px}.req .rnote{margin-top:5px;font-size:13px;color:var(--muted)}
+.badge{flex:none;font-size:11.5px;font-weight:700;padding:5px 11px;border-radius:999px;white-space:nowrap;align-self:flex-start}
+.b-core,.b-core-int,.b-core-part{color:var(--ok);background:var(--okbg)}
+.b-core-int{color:#0B7D77;background:#E4F5F3}
+.b-core-part{color:#8A5A00;background:#FBF0DC}
+.b-int{color:var(--int);background:var(--intbg)}
+.b-client{color:var(--cl);background:var(--clbg)}
+.b-part{color:var(--pt);background:var(--ptbg)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin:6px 0 4px;font-size:12.5px;color:var(--muted)}
+.legend b{font-weight:700}
+.slot{background:#fff;border:1.5px dashed var(--purpleblue);border-radius:18px;padding:22px 24px;margin:16px 0}
+.slot-tag{font-family:'Space Grotesk';font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--purpleblue)}
+.slot h3{font-size:20px;margin:6px 0 6px}.slot p{margin:0 0 10px;color:var(--muted);max-width:70ch}
+.slot-maps{font-size:12px;color:var(--navy);font-weight:600}
+.slot-ph{margin-top:14px;height:120px;border-radius:12px;background:linear-gradient(120deg,#F3F0FF,#FBEFF3);display:flex;align-items:center;justify-content:center;color:#9A8Fc0;font-family:'Space Grotesk';font-size:14px}
+.price{list-style:none;padding:0;margin:0}.price li{position:relative;padding:10px 0 10px 26px;border-top:1px solid var(--line)}.price li:before{content:"→";position:absolute;left:0;color:var(--fuchsia);font-weight:700}
+.refs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.refcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}.refcard h4{color:var(--navy);font-size:16px}.refcard .loc{color:var(--purpleblue);font-size:13px;margin:2px 0 8px}.refcard p{font-size:13.5px;color:var(--muted);margin:0}
+@media(max-width:760px){.refs{grid-template-columns:1fr}}
+.close{background:linear-gradient(125deg,#21006E,#7012AD 70%,#EB366E 130%);color:#fff;border-radius:22px;padding:38px 32px;margin:40px 0}
+.close .knum{color:#FFC79A}.close h2{color:#fff;font-size:26px;margin-bottom:8px}.close p{color:#EFE8FF;max-width:70ch}
+.foot{color:var(--muted);font-size:12.5px;padding:28px 0 56px;text-align:center}
+.draft{position:fixed;bottom:12px;right:12px;z-index:50;background:var(--navy);color:#fff;font-size:11px;padding:6px 12px;border-radius:999px;opacity:.85;font-family:'Space Grotesk'}
+</style></head>
+<body class="locked">
+
+<div id="gate"><div class="box">
+  <h2 class="grad">Atlantis The Palm, Dubai × Vantage</h2>
+  <p>This proposal is password protected. Please enter the password to continue.</p>
+  <input type="password" id="pw" placeholder="Password" autocomplete="current-password">
+  <button onclick="unlock()">Unlock</button><div class="err" id="err"></div>
+</div></div>
+
+<header class="hero"><div class="wrap">
+  <img class="logo" alt="Vantage by WhiteWater" src="data:image/png;base64,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">
+  <div class="ey">Response to Request for Proposal</div>
+  <h1>The one-platform outcome — <span class="grad">without the rip-and-replace risk.</span></h1>
+  <p class="sub">A response to the Aquaventure WaterPark Solution replacement. Vantage is the operating layer that already runs Aquaventure — unifying the guest and the data across your best-of-breed systems, live today, on hardware that is already in the ground.</p>
+  <div class="metabar">
+    <div><span>Submitted to</span><b>Atlantis The Palm, Dubai · IT PMO</b></div>
+    <div><span>Attention</span><b>Clair Aichhorn — Director, Aquaventure Operations</b></div>
+    <div><span>Prepared by</span><b>Vantage by WhiteWater</b></div>
+  </div>
+</div>
+<svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" height="58"><path fill="#F6F4FF" d="M0,40 C360,90 1080,-10 1440,40 L1440,80 L0,80 Z"/></svg>
+</header>
+
+<div class="wrap"><div class="stats">
+  <div class="statcard h"><div class="n">96</div><div class="l">Requirements answered</div></div>
+  <div class="statcard"><div class="n">74</div><div class="l">Vantage-led (core / co-delivered)</div></div>
+  <div class="statcard"><div class="n">14</div><div class="l">Via integration</div></div>
+  <div class="statcard"><div class="n">6</div><div class="l">Your system · by design</div></div>
+  <div class="statcard"><div class="n">2</div><div class="l">Partial / roadmap</div></div>
+</div></div>
+
+<nav class="nav"><div class="wrap"><div class="chips">
+  <a href="#exec">Summary</a><a href="#pA">A. Admissions &amp; Guest Services</a><a href="#pB">B. Digital Marketing &amp; Sales</a><a href="#pC">C. Finance</a><a href="#pD">D. Revenue Management</a><a href="#pE">E. F&amp;B &amp; Retail</a><a href="#pF">F. Infrastructure</a><a href="#pG">G. AI &amp; Tech Integrations</a><a href="#pH">H. Data, Analytics &amp; Reporting</a><a href="#pI">I. Project Delivery &amp; Governance</a><a href="#pJ">J. Security &amp; Compliance</a><a href="#reports">Finance reports</a><a href="#integrations">Integrations</a><a href="#pricing">Commercials</a><a href="#refs">References</a>
+</div></div></nav>
+
+<div class="wrap">
+
+  <section id="exec"><div class="callout">
+    <div class="knum">★ Executive summary</div>
+    <h2>The one-platform outcome, without the rip-and-replace risk.</h2>
+    <p class="lead" style="color:#E9E2FF">Aquaventure welcomes more than a million guests a year, and every one of them touches admission, access, a credential, and in-park spend — the layer Vantage already runs. We agree with the goal behind this request: one seamless guest experience, and one source of truth. We disagree only on the means. The reliable, lower-risk path to that goal is an operating OS over best-of-breed systems — not a monolith that bolts systems together and calls it one platform. What follows is a plain-spoken map of every requirement: what Vantage owns, what Vantage orchestrates through integration, and what stays with your finance and ticketing systems by design. Where we are not a perfect fit, we say so.</p>
+    
+  <div class="wt"><div class="wt-n">1</div><div><h4>Best-of-breed, unified — not a monolith.</h4><p>A single-vendor platform looks complete on paper, but it is best-in-class at nothing, and it hides fragmentation behind one logo — separate success managers, data that does not talk. Vantage is the operating OS that lets Atlantis run the best ticketing and the best of everything, then unifies the guest and the data across all of it. One seamless guest experience and one source of truth, without a vendor’s compromises.</p></div></div>
+
+  <div class="wt"><div class="wt-n">2</div><div><h4>The platform you shaped — now productized.</h4><p>Vantage began at Aquaventure as a custom build. It is now the productized platform the industry buys. Replacing the custom modules with the platform means Atlantis inherits the roadmap — new capability every quarter, instead of paying to invent each feature.</p></div></div>
+
+  <div class="wt"><div class="wt-n">3</div><div><h4>Live today — continuity, not disruption.</h4><p>The hardware is installed, the integrations are proven, customer success is embedded with your teams, and migration risk is low. Every alternative is a multi-year rip-and-replace with fresh hardware cost. Vantage is already running Aquaventure. Yes — there is new UI and training. The difference is that the integration is proven live, not promised.</p></div></div>
+    <div class="diff">No other system knows all of it: ticketing plus in-park behaviour plus dwell plus spend, tied to one guest.</div>
+  </div></section>
+
+  <section id="experience">
+    <div class="knum">◇ See it, don’t read it</div>
+    <h2>Touch the platform</h2>
+    <p class="lead">These are live, interactive modules — the same platform running Aquaventure today, not screenshots. Explore what your teams and your guests would actually use.</p>
+    
+  <div class="slot" id="slot-ops-dashboard">
+    <div class="slot-tag">Interactive · Live operations</div>
+    <h3>Live Operations Dashboard</h3>
+    <p>Capacity vs. attendance, per-attraction wait times, entry throughput by gate, and an in-park spend ticker — the single operator view that a bolt-on stack cannot produce.</p>
+    <div class="slot-maps">Answers ADM-11 · RPT-13 · FBR-08 · INF-06</div>
+    <div class="slot-ph">◇ Interactive module drops in here</div>
+  </div>
+
+  <div class="slot" id="slot-guest-profile">
+    <div class="slot-tag">Interactive · The unified guest</div>
+    <h3>One Guest, Everything</h3>
+    <p>Open a guest and see ticket, wristband, hotel stay, entitlements and in-park behaviour — dwell, attractions, and spend — tied together. The differentiator no other system can match.</p>
+    <div class="slot-maps">Answers ADM-03 · DMS-04 · AIT-03 · RPT-11</div>
+    <div class="slot-ph">◇ Interactive module drops in here</div>
+  </div>
+
+  <div class="slot" id="slot-guest-app">
+    <div class="slot-tag">Interactive · Guest app</div>
+    <h3>The Guest App, in your hand</h3>
+    <p>Plan the day, tap-to-pay from the wristband wallet, watch live wait times, climb the leaderboard — the experience a guest actually feels.</p>
+    <div class="slot-maps">Answers DMS-02 · DMS-07 · DMS-08 · ADM-08 · FBR-02</div>
+    <div class="slot-ph">◇ Interactive module drops in here</div>
+  </div>
+  </section>
+
+  <section id="matrix-intro">
+    <div class="knum">Answering the scope of work</div>
+    <h2>Every requirement, answered honestly</h2>
+    <p class="lead">Each requirement below carries a plain status. Most are Vantage core — much of it live at Aquaventure today. Some we orchestrate through integration to your best-of-breed systems. A few stay with your finance and ticketing systems by design — that is the point of an operating OS, not a monolith. Where we are only partway there, we say so.</p>
+    <div class="legend">
+      <span><b style="color:var(--ok)">Vantage core</b> — our system of record</span>
+      <span><b style="color:var(--int)">Via integration</b> — we orchestrate, best-of-breed provides the engine</span>
+      <span><b style="color:var(--cl)">Your system · by design</b> — finance / ticketing keeps it</span>
+      <span><b style="color:var(--pt)">Partial / roadmap</b> — honest gap, with a plan</span>
+    </div>
+  </section>
+
+  
+  <section id="pA">
+    <div class="knum">A</div>
+    <h2>Admissions &amp; Guest Services</h2>
+    <div class="req">
+      <div class="rid">ADM-01</div>
+      <div class="rtx">Unified admissions &amp; access management (all ticket types, memberships, entitlements, access credentials, every channel)<div class="rnote">Vantage = SoR for access, credential &amp; entitlement across channels; ticketing provides the sale</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">ADM-02</div>
+      <div class="rtx">Frictionless guest entry (mobile ticketing, RFID wristbands, digital credentials, wallet, auto re-entry, hotel integration, rapid verification)<div class="rnote">Live at Aquaventure today</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">ADM-03</div>
+      <div class="rtx">Integrated guest identity &amp; entitlement management (unified profile: tickets, wristbands, memberships, hotel, spend limits, family/group)<div class="rnote">Flagship — the unified guest profile</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">ADM-04</div>
+      <div class="rtx">Operational efficiency (high-volume processing, group admissions, offline ops, real-time queue, automated entitlement activation)<div class="rnote">Incl. offline operation</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">ADM-05</div>
+      <div class="rtx">Accessibility &amp; inclusive services (priority access, return-time mgmt, disability, multilingual)<div class="rnote">Multilingual app + priority access</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">ADM-06</div>
+      <div class="rtx">Hotel-to-park integration (Opera PMS, room-based access, biometric, auto-sync)<div class="rnote"><strong>Opera Cloud integration already done</strong> — strong proof</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">ADM-07</div>
+      <div class="rtx">Park navigation &amp; digital journey (Face Recognition preferred entry/exit; UAE Pass)<div class="rnote">Wayfinding = core; <strong>facial recognition = feasible, net-new, prototyped before</strong>; <strong>UAE Pass = in-progress in current version, feasible on access control</strong></div></div>
+      <div class="badge b-part">Partial / roadmap</div>
+    </div>
+<div class="req">
+      <div class="rid">ADM-08</div>
+      <div class="rtx">Guest self-service &amp; digital enablement (apps, kiosks, online activation, ticket mods, wristband linking)</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">ADM-09</div>
+      <div class="rtx">Service recovery &amp; guest relationship (issue resolution, ticket amendments, complaints, refunds, chargebacks, lost wristband replacement)<div class="rnote">Lost-wristband + app/kiosk-commerce refunds = Vantage; ticket amendments/chargebacks via ticketing</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">ADM-10</div>
+      <div class="rtx">Revenue protection &amp; entitlement control (accurate activation, consumption, tracking, transfer, minimize leakage)<div class="rnote">Entitlement validation is core Vantage</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">ADM-11</div>
+      <div class="rtx">Real-time operational visibility (guest profiles, wristband status, queue, KPIs)<div class="rnote">Role-based live dashboards</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">ADM-12</div>
+      <div class="rtx">Wristband strategy &amp; alternatives (help evaluate alternatives to wristbands/turnstiles: app, QR, facial rec, digital identity)<div class="rnote">Consultative — Vantage supports wristband/QR/app/credential; facial rec per ADM-07</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">ADM-13</div>
+      <div class="rtx">Park entry experience &amp; turnstiles (reduce entry friction)<div class="rnote">Vantage credential/access; turnstile hardware integration</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+  </section>
+
+  <section id="pB">
+    <div class="knum">B</div>
+    <h2>Digital Marketing &amp; Sales</h2>
+    <div class="req">
+      <div class="rid">DMS-01</div>
+      <div class="rtx">Unified omnichannel commerce (web, app, kiosks, call center, OTAs, B2B; pricing/inventory/entitlements synced)<div class="rnote">Ticketing/commerce owns sale/inventory/pricing; Vantage syncs entitlements + app/kiosk commerce</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">DMS-02</div>
+      <div class="rtx">Guest registration through mobile app (primary channel; eliminate duplicate profiles; groups = team leader registers)</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">DMS-03</div>
+      <div class="rtx">Commercial agility (dynamic pricing, packaging, promotions, upsell/cross-sell; rapid launch)<div class="rnote">Pricing/promo engine = ticketing; app-side upsell/cross-sell + entitlement packaging = Vantage</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">DMS-04</div>
+      <div class="rtx">Customer data unification (purchasing, visitation, spending, engagement, loyalty → single view)<div class="rnote">The unique cross-domain guest view</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">DMS-05</div>
+      <div class="rtx">Personalization &amp; guest engagement (guest data, CRM/CDP, targeted comms)<div class="rnote">Behavior data + engagement = Vantage; CDP/CRM via integration</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">DMS-06</div>
+      <div class="rtx">Integrated marketing ecosystem (segmentation, campaign automation, attribution, campaign→booking→spend)<div class="rnote">Marketing automation = partner; <strong>Vantage supplies the in-park spend/behavior attribution</strong></div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">DMS-07</div>
+      <div class="rtx">Aquaventure mobile-experience (tickets, RFID credentials, cashless, navigation, notifications, loyalty; native within Atlantis Mobile App)<div class="rnote">Vantage app/SDK white-labeled</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">DMS-08</div>
+      <div class="rtx">In-park digital enablement (live ride info, wayfinding, digital wallet, on-demand purchases, contextual promos)</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">DMS-09</div>
+      <div class="rtx">Loyalty, retention &amp; repeat visitation (loyalty, gamification, offers, rewards, badges, history recognition)<div class="rnote">Gamification/badges/behavior = core</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">DMS-10</div>
+      <div class="rtx">Data-driven decision making (analytics + attribution; CDP single profile; waterpark feeds 360 view)<div class="rnote">Vantage feeds waterpark behavior/spend into the CDP</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">DMS-11</div>
+      <div class="rtx">Future-proof &amp; open architecture<div class="rnote">API-first</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">DMS-12</div>
+      <div class="rtx">Multi-park, multi-property (configurable)<div class="rnote">Multi-site — <strong>Enchanted Parks proof</strong></div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">DMS-13</div>
+      <div class="rtx">White-label ticketing for future business (galas, events, attractions)<div class="rnote">White-labeled guest surfaces (app/QR/wristband) = core &amp; live; a white-label *ticketing engine* for new event types = best-of-breed/roadmap</div></div>
+      <div class="badge b-part">Partial / roadmap</div>
+    </div>
+  </section>
+
+  <section id="pC">
+    <div class="knum">C</div>
+    <h2>Finance</h2>
+    <div class="req">
+      <div class="rid">FIN-01</div>
+      <div class="rtx">Enterprise-wide financial integration (Opera, Simphony, ERP/Finance, CRM, Gift Voucher, gateways, mobile, e-commerce)<div class="rnote">Vantage integrates + feeds; finance SoR = ERP</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">FIN-02</div>
+      <div class="rtx">Financial compliance (IFRS 15 recognition, deferred mgmt, auditability)<div class="rnote">IFRS-15 engine = finance/ERP; Vantage feeds redemption truth</div></div>
+      <div class="badge b-client">Your system · by design</div>
+    </div>
+<div class="req">
+      <div class="rid">FIN-03</div>
+      <div class="rtx">Deferred revenue &amp; liability management<div class="rnote">Ticketing = SoR for sold/deferred; <strong>Vantage = SoR for redeemed</strong>, feeds back</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">FIN-04</div>
+      <div class="rtx">Financial integrity &amp; revenue protection (audit trails, pricing governance, reconciliation, entitlement validation, traceability, variance)<div class="rnote">Entitlement validation + redemption traceability = Vantage; reconciliation = finance</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">FIN-05</div>
+      <div class="rtx">Dynamic pricing governance &amp; commercial transparency (auditable price/discount/promo)<div class="rnote">Pricing engine + audit = ticketing/finance</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">FIN-06</div>
+      <div class="rtx">Voucher, gift card &amp; promotional instrument mgmt (issuance, redemption, liability, breakage, reconciliation)<div class="rnote">Gift cards = PineLabs; <strong>in-park entitlement voucher redemption = Vantage</strong> (e.g. towel voucher)</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">FIN-07</div>
+      <div class="rtx">B2B, travel trade &amp; partner revenue mgmt (credit, reconciliation, commission, settlement)<div class="rnote">Ticketing/finance; Vantage acts as an in-app entitlement sales channel</div></div>
+      <div class="badge b-client">Your system · by design</div>
+    </div>
+<div class="req">
+      <div class="rid">FIN-08</div>
+      <div class="rtx">Cashless payments &amp; multi-tender commerce (RFID, wallets, room charge, gift cards, vouchers, FX, multi-tender)<div class="rnote">Vantage links guest identity to cashless via tokenized card + wristband; processing = Freedom Pay; room charge = Opera</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">FIN-09</div>
+      <div class="rtx">Auditability, reporting &amp; governance (audit trails, controls, transaction history, user activity logging, regulatory reporting)<div class="rnote">Vantage: own audit + user-activity logging + redemption history; regulatory finance = ERP</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">FIN-10</div>
+      <div class="rtx">Business intelligence &amp; financial visibility (real-time reporting across revenue/liabilities/utilization/deferred/commissions/spend)<div class="rnote">Vantage feeds utilization/spend/behavior; BI surface = PowerBI</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">FIN-11</div>
+      <div class="rtx">COA mapping &amp; reporting (chart of accounts, automated reconciliation)<div class="rnote">ERP/finance</div></div>
+      <div class="badge b-client">Your system · by design</div>
+    </div>
+<div class="req">
+      <div class="rid">FIN-12</div>
+      <div class="rtx">Migration &amp; financial continuity (historical financial data migration, reconciliation, continuity)<div class="rnote">Vantage migrates own historical guest/redemption data; financial ledgers = ERP/finance</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">FIN-13</div>
+      <div class="rtx">Financial reporting &amp; decision support (consolidated sales, deferred, recognized, liabilities, utilization, pricing, KPIs)<div class="rnote">Vantage feeds utilization/redemption; consolidated finance = ERP/BI</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+  </section>
+
+  <section id="pD">
+    <div class="knum">D</div>
+    <h2>Revenue Management</h2>
+    <div class="req">
+      <div class="rid">REV-01</div>
+      <div class="rtx">Revenue growth &amp; yield optimization (dynamic pricing, promotions, packaging, upsell, cross-sell, cashless spend)<div class="rnote">Cashless spend + in-app upsell = Vantage; pricing/yield engine = ticketing</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">REV-02</div>
+      <div class="rtx">End-to-end revenue lifecycle (admissions, memberships, prepaid, ancillary, meal deals, lockers, cabanas, vouchers, corporate, loyalty, promo — sale→redemption→recognition)<div class="rnote">Redemption lifecycle incl. lockers/meal-deals/cabanas = Vantage; sale/recognition = ticketing/finance</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">REV-03</div>
+      <div class="rtx">IFRS 15-compliant revenue recognition<div class="rnote">Finance engine; Vantage feeds redemption</div></div>
+      <div class="badge b-client">Your system · by design</div>
+    </div>
+<div class="req">
+      <div class="rid">REV-04</div>
+      <div class="rtx">Revenue leakage prevention (entitlement validation, redemption tracking, controls, reconciliation)<div class="rnote">Entitlement validation + redemption = Vantage's core anti-leakage</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">REV-05</div>
+      <div class="rtx">Dynamic pricing governance<div class="rnote">Ticketing</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">REV-06</div>
+      <div class="rtx">Commercial performance analytics (pricing effectiveness, elasticity, utilization, channel, promo results, profitability by segment)<div class="rnote">Utilization + segment behavior = Vantage; pricing/channel = ticketing</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">REV-07</div>
+      <div class="rtx">Multi-product &amp; bundle revenue allocation (admissions, F&amp;B, retail, premium, cabanas, lockers, ancillary)<div class="rnote">Vantage tracks bundle consumption/allocation data (finance sets rules)</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">REV-08</div>
+      <div class="rtx">Forecasting &amp; revenue intelligence (future demand, deferred liabilities, utilization patterns, redemption trends)<div class="rnote">Attendance/utilization/redemption trends = core; **predictive AI demand forecasting =</div></div>
+      <div class="badge b-core-part">Core + roadmap</div>
+    </div>
+<div class="req">
+      <div class="rid">REV-09</div>
+      <div class="rtx">Channel &amp; product profitability + promotions engine (promo codes, partner pricing, campaigns, 24hr launch)<div class="rnote">Promo engine + channel = ticketing/commerce; app-side promos + in-park product profitability = Vantage</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+  </section>
+
+  <section id="pE">
+    <div class="knum">E</div>
+    <h2>F&amp;B &amp; Retail</h2>
+    <div class="req">
+      <div class="rid">FBR-01</div>
+      <div class="rtx">Unified commerce &amp; transaction ecosystem (admissions, F&amp;B, retail, hotel, access, payments, finance)<div class="rnote">Vantage unifies via guest identity/entitlement; POS = Simphony</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">FBR-02</div>
+      <div class="rtx">RFID-enabled guest transactions (identification, entitlement validation, purchase auth, tracking)<div class="rnote">Literally core Vantage</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">FBR-03</div>
+      <div class="rtx">Seamless cashless payment (RFID across F&amp;B, retail, cabanas, premium, lockers)<div class="rnote">Vantage credential+identity; processing = Freedom Pay</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">FBR-04</div>
+      <div class="rtx">Integrated product bundling (entitlements auto-validated/redeemed/tracked; validity rules)<div class="rnote">e.g. unlimited-drinks bundle with a 15-min cooldown validity rule + usage tracking</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">FBR-05</div>
+      <div class="rtx">Revenue optimization &amp; financial integrity (allocation, recognition, reconciliation across lines; bundles auto-distribute revenue)<div class="rnote">Consumption/allocation data = Vantage; recognition = finance</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">FBR-06</div>
+      <div class="rtx">End-to-end guest visibility (purchases, spending, entitlements, hotel stays, transaction history)</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">FBR-07</div>
+      <div class="rtx">Enterprise integrations (Opera, Simphony, ERP/Finance, CRM/CDP, gift voucher, gateways, BI)</div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">FBR-08</div>
+      <div class="rtx">Real-time consumption tracking (guest spend, entitlement redemption, consumption, ops performance)</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+  </section>
+
+  <section id="pF">
+    <div class="knum">F</div>
+    <h2>Infrastructure</h2>
+    <div class="req">
+      <div class="rid">INF-01</div>
+      <div class="rtx">High availability &amp; business continuity (redundant, failover, no SPOF; admissions/RFID/payments/access stay up)<div class="rnote">Vantage cloud HA for its layer + offline reader capability; park-wide continuity shared with client/integrator</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">INF-02</div>
+      <div class="rtx">Scalable cloud architecture (peak/seasonal scale)<div class="rnote">Vantage AWS SaaS</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">INF-03</div>
+      <div class="rtx">Resilient access control &amp; RFID infrastructure<div class="rnote">Vantage RFID/access software + reader integration; physical network = client/integrator</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">INF-04</div>
+      <div class="rtx">Disaster recovery &amp; operational resilience<div class="rnote">Vantage DR for its platform; park DR = client</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">INF-05</div>
+      <div class="rtx">Network reliability &amp; connectivity (wired/wireless for readers, POS, kiosks, mobile)<div class="rnote">Park network = client/integrator; Vantage rides on it</div></div>
+      <div class="badge b-client">Your system · by design</div>
+    </div>
+<div class="req">
+      <div class="rid">INF-06</div>
+      <div class="rtx">Real-time monitoring &amp; operational visibility (infra health, network, servers, power, services)<div class="rnote">Vantage monitors its platform + business-service dashboards; infra/power/network monitoring = client/IT</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">INF-07</div>
+      <div class="rtx">Edge resilience &amp; offline operations (offline processing, local storage, auto-sync)<div class="rnote">Real Vantage capability — readers/app operate offline and sync</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">INF-08</div>
+      <div class="rtx">Data protection &amp; system security<div class="rnote">See Pillar J</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">INF-09</div>
+      <div class="rtx">Power protection &amp; operational stability (UPS for readers, network, servers, admissions, payment)<div class="rnote">Physical power = client/integrator; Vantage advises device power needs</div></div>
+      <div class="badge b-client">Your system · by design</div>
+    </div>
+<div class="req">
+      <div class="rid">INF-10</div>
+      <div class="rtx">Future-ready enterprise foundation</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+  </section>
+
+  <section id="pG">
+    <div class="knum">G</div>
+    <h2>AI &amp; Tech Integrations</h2>
+    <div class="req">
+      <div class="rid">AIT-01</div>
+      <div class="rtx">End-to-end digital ecosystem integration (Opera, Simphony, ERP/Finance, CRM/CDP, BI, Gift Voucher, gateways, web commerce)<div class="rnote">Vantage as the guest/commerce/operational integration OS — the thesis</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">AIT-02</div>
+      <div class="rtx">API-first &amp; open architecture (secure, real-time, standard protocols/auth)</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">AIT-03</div>
+      <div class="rtx">Unified guest, commerce &amp; operational data (single synchronized source of truth)<div class="rnote">The thesis</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">AIT-04</div>
+      <div class="rtx">Intelligent automation &amp; operational efficiency (data sync, entitlement mgmt, transaction processing, reconciliation, exception mgmt)<div class="rnote">Vantage automates entitlement/sync; financial reconciliation = finance</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">AIT-05</div>
+      <div class="rtx">Comprehensive RFID &amp; smart technology ecosystem (RFID + biometric across admissions, lockers, payments, services, access)<div class="rnote">RFID = core; biometric = partial (see ADM-07)</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">AIT-06</div>
+      <div class="rtx">Omnichannel commerce &amp; digital experience enablement (consistent pricing/inventory across channels)<div class="rnote">Commerce/ticketing; Vantage app/kiosk + entitlement sync</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">AIT-07</div>
+      <div class="rtx">Resilient integration (governance, real-time sync, auto retry, exception handling, failed-transaction mgmt)<div class="rnote">Vantage integration-layer resilience</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">AIT-08</div>
+      <div class="rtx">Intelligent scalable ops &amp; AI enablement (long-term ownership of custom dev/integrations/configs; emerging tech, AI "WOW")<div class="rnote">Platform ownership/config + open data = core; specific AI features = roadmap</div></div>
+      <div class="badge b-core-part">Core + roadmap</div>
+    </div>
+  </section>
+
+  <section id="pH">
+    <div class="knum">H</div>
+    <h2>Data, Analytics &amp; Reporting</h2>
+    <div class="req">
+      <div class="rid">DAR-01</div>
+      <div class="rtx">Business ownership of data (full ownership, no vendor lock-in, unrestricted access, open integration, export)<div class="rnote">Directly answers the lock-in fear; open-data posture is our anti-monolith edge.</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">DAR-02</div>
+      <div class="rtx">Unified Customer Data Platform (centralized guest profile across lifecycle + configurable reporting/extract)<div class="rnote">With CDP integration</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">DAR-03</div>
+      <div class="rtx">Data-driven personalization</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">DAR-04</div>
+      <div class="rtx">Real-time data accessibility (feeds, integrations, reporting)</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">DAR-05</div>
+      <div class="rtx">Connected data ecosystem (admissions, commerce, RFID, mobile, CRM/CDP, finance, hotel, marketing synchronized)</div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">DAR-06</div>
+      <div class="rtx">Data quality (governance, validation, reconciliation, sync, stewardship)</div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">DAR-07</div>
+      <div class="rtx">Migration &amp; historical data preservation (3-yr+ possibly since opening; legacy transaction, guest, financial, entitlement history)<div class="rnote"><strong>Incumbent advantage — we already hold the guest/redemption history;</strong> financial ledger migration = finance</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+  </section>
+
+  <section id="pI">
+    <div class="knum">I</div>
+    <h2>Project Delivery &amp; Governance</h2>
+    <div class="req">
+      <div class="rid">PDG-01</div>
+      <div class="rtx">Structured delivery &amp; transformation governance (discovery→transition; align Kerzner/Atlantis PMO)<div class="rnote">Vantage methodology; incumbent edge</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">PDG-02</div>
+      <div class="rtx">Quality assurance &amp; controlled deployment (SIT, load, security testing, UAT, pilots, staged go-live)</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">PDG-03</div>
+      <div class="rtx">Cross-functional ownership &amp; accountability (RACI)</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">PDG-04</div>
+      <div class="rtx">Controlled change management</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">PDG-05</div>
+      <div class="rtx">Business adoption (role-based training, knowledge transfer, simulation)</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">PDG-06</div>
+      <div class="rtx">Phased deployment &amp; risk mitigation (pilots, controlled rollouts, parallel ops, hyper care)<div class="rnote">Incumbent = lower-risk phasing, continuity advantage</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">PDG-07</div>
+      <div class="rtx">Resource planning (onsite/offshore/hybrid; planning, progress, milestones)</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">PDG-08</div>
+      <div class="rtx">Business transformation (operational processes, not just tech)<div class="rnote">Consultative posture — our differentiator</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">PDG-09</div>
+      <div class="rtx">Continuous improvement &amp; long-term success (stabilization, optimization, enhancement roadmap)<div class="rnote">The roadmap flywheel — answers the custom-baggage reframe</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+  </section>
+
+  <section id="pJ">
+    <div class="knum">J</div>
+    <h2>Security &amp; Compliance</h2>
+    <div class="req">
+      <div class="rid">SEC-01</div>
+      <div class="rtx">Enterprise-grade security framework (guest data, transactions, ops, integrations; controls, encryption, monitoring, access mgmt)<div class="rnote">Vantage platform security</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">SEC-02</div>
+      <div class="rtx">Regulatory compliance &amp; governance (PCI-DSS, GDPR, UAE PDPL)<div class="rnote">Compliant for Vantage-held data</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">SEC-03</div>
+      <div class="rtx">Payment security &amp; PCI-DSS compliance (Level 1, tokenization, transaction protection)<div class="rnote">Via Freedom Pay processor + Vantage tokenization (no PAN stored)</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">SEC-04</div>
+      <div class="rtx">Identity &amp; access management (RBAC; employees, admins, vendors, support; segregation of duties)<div class="rnote">Vantage RBAC already powers dashboards</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">SEC-05</div>
+      <div class="rtx">Security monitoring &amp; risk management (events, access, changes, anomalies)<div class="rnote">Vantage platform monitoring; enterprise SIEM = client/IT</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">SEC-06</div>
+      <div class="rtx">Long-term security &amp; compliance readiness (scalable governance for future regs/threats)</div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+  </section>
+
+  <section id="reports">
+    <div class="knum">Mandatory finance reports</div>
+    <h2>The 14 mandatory reports</h2>
+    <p class="lead">We are not your finance system — yet the majority of these reports are produced or fed by Vantage, because access, redemption and entitlement are where recognised revenue actually happens.</p>
+    <div class="req">
+      <div class="rid">RPT-01</div>
+      <div class="rtx">Daily Revenue Summary by Ticket Type<div class="rnote">Recognized-revenue view from redemption</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">RPT-02</div>
+      <div class="rtx">Deferred Revenue Balance<div class="rnote">Ticketing SoR (sold/deferred); Vantage SoR (redeemed), feeds back</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">RPT-03</div>
+      <div class="rtx">Refund &amp; Void<div class="rnote">Ticket refunds → ticketing; app/kiosk e-commerce refunds on Vantage tokenized card → Vantage</div></div>
+      <div class="badge b-int">Split</div>
+    </div>
+<div class="req">
+      <div class="rid">RPT-04</div>
+      <div class="rtx">Voucher Liability Aging<div class="rnote">Admission vouchers → ticketing; in-park entitlement vouchers → Vantage core</div></div>
+      <div class="badge b-int">Split</div>
+    </div>
+<div class="req">
+      <div class="rid">RPT-05</div>
+      <div class="rtx">Travel Agent / Reseller Settlement<div class="rnote">Ticketing/finance</div></div>
+      <div class="badge b-client">Your system · by design</div>
+    </div>
+<div class="req">
+      <div class="rid">RPT-06</div>
+      <div class="rtx">Breakage Analysis<div class="rnote">Redeemed-vs-ordered by day is ours</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">RPT-07</div>
+      <div class="rtx">Channel Revenue (web/gate/agent/kiosk)<div class="rnote">*Sales*-channel revenue = ticketing; Vantage owns entry-channel + attendance-by-area + attendant audit (a different cut)</div></div>
+      <div class="badge b-client">Your system · by design</div>
+    </div>
+<div class="req">
+      <div class="rid">RPT-08</div>
+      <div class="rtx">Dynamic Pricing Revenue Variance<div class="rnote">Ticketing owns pricing; Vantage redeems at that price</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">RPT-09</div>
+      <div class="rtx">Complimentary &amp; Staff Ticket<div class="rnote">General comps → ticketing; staff/employee entitlements → Vantage</div></div>
+      <div class="badge b-int">Split</div>
+    </div>
+<div class="req">
+      <div class="rid">RPT-10</div>
+      <div class="rtx">F&amp;B Bundle Revenue Allocation<div class="rnote">Entitlement + validity rules + usage counts</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">RPT-11</div>
+      <div class="rtx">Season Pass Utilization &amp; Revenue Spread<div class="rnote">Visits + cross-domain behavior (dwell × F&amp;B spend × attractions) — unique to Vantage; doubles as marketing-targeting engine</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">RPT-12</div>
+      <div class="rtx">Cash &amp; Card Settlement Reconciliation<div class="rnote">Finance/POS/processor; Vantage contributes guest-identity linkage on cashless</div></div>
+      <div class="badge b-client">Your system · by design</div>
+    </div>
+<div class="req">
+      <div class="rid">RPT-13</div>
+      <div class="rtx">Capacity vs. Revenue<div class="rnote">Live role-based dashboards, joinable to revenue</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+<div class="req">
+      <div class="rid">RPT-14</div>
+      <div class="rtx">Year-on-Year Revenue Comparison<div class="rnote">Given historical data preserved (we hold it as incumbent)</div></div>
+      <div class="badge b-core">Vantage core</div>
+    </div>
+  </section>
+
+  <section id="integrations">
+    <div class="knum">Integrations</div>
+    <h2>Your best-of-breed stack, unified</h2>
+    <p class="lead">Vantage is the operating layer between them. Opera Cloud is already integrated and live today.</p>
+    <div class="req">
+      <div class="rid">INT-01</div>
+      <div class="rtx">ERP — JDEdwards / Oracle Fusion<div class="rnote">Vantage feeds finance data; ERP = client SoR</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">INT-02</div>
+      <div class="rtx">CRM — Saga / Salesforce / Mulesoft / web commerce<div class="rnote">Vantage pushes guest + behavior data (reports linkable to Salesforce)</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">INT-03</div>
+      <div class="rtx">Single Sign-On (SSO)<div class="rnote">Vantage supports SSO</div></div>
+      <div class="badge b-core-int">Core + integrated</div>
+    </div>
+<div class="req">
+      <div class="rid">INT-04</div>
+      <div class="rtx">Payment gateway — NI / Freedompay<div class="rnote">Vantage tokenization + guest link; processing = Freedom Pay</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">INT-05</div>
+      <div class="rtx">Property Management — Opera Cloud<div class="rnote"><strong>Already done today — proof point</strong></div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">INT-06</div>
+      <div class="rtx">F&amp;B — Micros / Simphony</div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">INT-07</div>
+      <div class="rtx">e-Invoicing (compliant)<div class="rnote">Finance</div></div>
+      <div class="badge b-client">Your system · by design</div>
+    </div>
+<div class="req">
+      <div class="rid">INT-08</div>
+      <div class="rtx">DigiPhoto<div class="rnote">Photo monetization tied to guest identity</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">INT-09</div>
+      <div class="rtx">Gift Voucher — PineLabs</div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">INT-10</div>
+      <div class="rtx">OTA / B2B portal<div class="rnote">Ticketing/commerce</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">INT-11</div>
+      <div class="rtx">CDP<div class="rnote">Vantage feeds guest/behavior data</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">INT-12</div>
+      <div class="rtx">PowerBI<div class="rnote">Vantage data → BI</div></div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">INT-13</div>
+      <div class="rtx">Atlantis Mobile App</div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+<div class="req">
+      <div class="rid">INT-14</div>
+      <div class="rtx">Atlantis Loyalty App</div>
+      <div class="badge b-int">Via integration</div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="knum">Commercials</div>
+    <h2>Continuity, not a restart</h2>
+    <ul class="price"><li>The model, flipped. The old engagement was a modest subscription plus years of custom development. The platform removes that — no seven-figure build to get started.</li>
+<li>No hardware contract. The readers, wristbands and infrastructure are already installed. That is capital every other bidder would ask Atlantis to spend again.</li>
+<li>Subscription that shares the risk. A per-guest model with a base fee means we carry some of the exposure of a soft season alongside you — not all of it on your side of the table.</li>
+<li>Total cost that reflects continuity, not a restart — measured against both the custom era and a competitor’s rip-and-replace. Full commercials are in the accompanying submission.</li></ul>
+  </section>
+
+  <section id="refs">
+    <div class="knum">Proof</div>
+    <h2>Operators who trust Vantage</h2>
+    <div class="refs">
+  <div class="refcard"><h4>WhiteWater</h4><div class="loc">Global attractions pedigree</div><p>Vantage is “by WhiteWater” — the enterprise credibility and global attractions footprint behind the platform.</p></div>
+
+  <div class="refcard"><h4>Enchanted Parks</h4><div class="loc">Multi-site operator</div><p>A multi-property deployment — directly relevant as Atlantis plans its Jeddah and Maldives experiences.</p></div>
+
+  <div class="refcard"><h4>Meryal — Doha, Qatar</h4><div class="loc">In deployment</div><p>A current regional deployment that speaks to delivery in the Gulf.</p></div></div>
+  </section>
+
+  <div class="close">
+    <div class="knum">★ Why Vantage for Atlantis</div>
+    <h2>Already live. Ready for what’s next.</h2>
+    <p>You do not have to choose between one seamless guest experience and the freedom to run best-of-breed. Vantage already gives Atlantis both — live today, on hardware already installed, with the team that knows your property. This is not a restart. It is the platform you helped shape, ready to run the next chapter of Aquaventure — and the parks that follow it.</p>
+  </div>
+
+  <div class="foot">Vantage by WhiteWater · Prepared for Atlantis The Palm, Dubai · Confidential · Scaffold build 2026-08-15</div>
+</div>
+
+<div class="draft">DRAFT SCAFFOLD · interactive modules pending</div>
+
+<script>
+var PW="aquaventure2026";
+function unlock(){var v=document.getElementById('pw').value;
+ if(v===PW){document.getElementById('gate').style.display='none';document.body.classList.remove('locked');}
+ else{document.getElementById('err').textContent='Incorrect password. Please try again.';}}
+document.getElementById('pw').addEventListener('keydown',function(e){if(e.key==='Enter')unlock();});
+</script>
+</body></html>
